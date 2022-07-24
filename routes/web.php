@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $users = User::with(['todoLists'])->get();
     // $user = User::with(['todoLists'])->find(1);
-
+    
     return view('welcome',compact('users'));
 });
